@@ -1,0 +1,44 @@
+#banner {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 2vw;
+    margin-bottom: 10px;
+}
+#foodsMenu {
+    background-color: aqua;
+    color: black;
+    text-align: center;
+    width: 75vw;
+    height: 60vw;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#allergyMenu {
+    background-color: red;
+    width: 85vw;
+    height: 30vw;
+    margin: auto;
+    padding: 10px;
+}
+#ratingTable {
+    margin: auto;
+    width: 75vw;
+}
+/* #foodColumn {
+
+}
+#ratingColumn {
+
+} */
+#alert {
+    padding: 15px;
+}
+#submit {
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+}

@@ -1,0 +1,13 @@
+#banner {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 2vw;
+    margin-bottom: 10px;
+}
+#resultPending {
+    text-align: center;
+    color: red;
+}
