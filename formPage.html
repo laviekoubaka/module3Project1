@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Form Page</title>
+</head>
+<body>
+    <div id="banner">
+        <h1>[meal type]</h1>
+    </div>
+    <div id="foodsMenu">
+        <h1>Rate Your Food Preferences:</h1>
+        <table id="ratingTable">
+            <!-- i am including four food preference options because that is what John suggested initially; we can always add more or fewer options. each option must be linked to a DOM function that, in tandem with the "rating" option and excluding the allergic foods, generates an API call to spoonacular to retrieve recipes -->
+            <th id="foodColumn">Food:</th>
+            <th id="ratingColumn">Rating:</th>
+            <tr>
+                <td>
+                    <div class="dropDown">
+                        <label for="foodOptions">
+                            Choose a Food:
+                        </label>
+                        <select name="foodOptions">
+                            <option value="carrots">
+                                Carrots
+                            </option>
+                            <option value="chicken">
+                                Chicken
+                            </option>
+                            <option value="eggs">
+                                Eggs
+                            </option>
+                            <option value="Pasta">
+                                Pasta
+                            </option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <form>
+                        <label for="rateFood">
+                            Rate the Food:
+                        </label>
+                        <input type="text" name="rating" value="">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="dropDown">
+                        <label for="foodOptions">
+                            Choose a Food:
+                        </label>
+                        <select name="foodOptions">
+                            <option value="carrots">
+                                Carrots
+                            </option>
+                            <option value="chicken">
+                                Chicken
+                            </option>
+                            <option value="eggs">
+                                Eggs
+                            </option>
+                            <option value="Pasta">
+                                Pasta
+                            </option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <form>
+                        <label for="rateFood">
+                            Rate the Food:
+                        </label>
+                        <input type="text" name="rating" value="">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="dropDown">
+                        <label for="foodOptions">
+                            Choose a Food:
+                        </label>
+                        <select name="foodOptions">
+                            <option value="carrots">
+                                Carrots
+                            </option>
+                            <option value="chicken">
+                                Chicken
+                            </option>
+                            <option value="eggs">
+                                Eggs
+                            </option>
+                            <option value="Pasta">
+                                Pasta
+                            </option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <form>
+                        <label for="rateFood">
+                            Rate the Food:
+                        </label>
+                        <input type="text" name="rating" value="">
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="dropDown">
+                        <label for="foodOptions">
+                            Choose a Food:
+                        </label>
+                        <select name="foodOptions">
+                            <option value="carrots">
+                                Carrots
+                            </option>
+                            <option value="chicken">
+                                Chicken
+                            </option>
+                            <option value="eggs">
+                                Eggs
+                            </option>
+                            <option value="Pasta">
+                                Pasta
+                            </option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <form>
+                        <label for="rateFood">
+                            Rate the Food:
+                        </label>
+                        <input type="text" name="rating" value="">
+                    </form>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <div id="allergyMenu">
+        <!-- the allergy menu is obviously still a beta version, because we need to figure out how many allergies should be included in the form input. frankly, this should probably be a text input which allows users to type in their unique food allergies, but that will require additional regex and API calls -->
+        <div id="alert">
+            <h1>ALERT:</h1>
+            <h3>PLEASE list any food allergies:</h3>
+            <select name="allergyOptions">
+                <option value="allergyOne">
+                    Allergy One
+                </option>
+                <option value="allergyTwo">
+                    Allergy Two
+                </option>
+                <option value="allergyThree">
+                    Allergy Three
+                </option>
+                <option value="allergyFour">
+                    Allergy Four
+                </option>
+            </select>
+        </div>
+    </div>
+    <div id="submit">
+        <!-- not sure if the onclick should be in the button tag or if we need additional JS to run the generateRecipes function when the result page loads -->
+        <button onclick="generateRecipes()">
+        <a href="resultPage.html">Rustle Up Some Grub!!!</a></button>
+    </div>
+</body>
+</html>
