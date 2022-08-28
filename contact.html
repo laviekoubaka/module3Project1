@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>
+			<label for="name">Name</label>
+			<input id="name" name="name" placeholder="add your name here" />
+			<br />
+			<br />
+			<label for="message">Comments</label>
+			<textarea
+				id="message"
+				name="message"
+				placeholder="add your comment here"
+			></textarea>
+			<br />
+			<br />
+			<button id="submit">Send us your Ideas!</button>
+		</div>
+
+		<script>
+			document
+				.getElementById("submit")
+				.addEventListener("click", function () {
+					let name = document.getElementById("name").value;
+					let message = document.getElementById("message").value;
+                    let data = {
+                        name,
+                        message
+                    }
+					//set up the fetch like it is in postman
+					fetch(
+						"your db url",
+						{
+							method: "POST", 
+							headers: {
+								"Content-Type": "application/json",
+								// 'Content-Type': 'application/x-www-form-urlencoded',
+							},
+							body: JSON.stringify(data), // body data type must match "Content-Type" header
+						}
+					).then(res=>{
+                        if(res.status ==200){
+                            alert("you comment has been noted")
+                        }else{
+                            alert("Error - try again")
+                        }
+                    })
+				});
+		</script>
+	</body>
+</html>
